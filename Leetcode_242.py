@@ -1,6 +1,5 @@
 class Solution(object):
 
-
     def isAnagram_hashTable_notOptimised(self, s, t):
         """
         :type s: str
