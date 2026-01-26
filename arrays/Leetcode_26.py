@@ -1,28 +1,18 @@
 from typing import List
 
+
 class Solution:
-    
     def removeDuplicates(self, nums: List[int]) -> int:
-        
-        i = 0
-        j = 1
-        
-        k = 1
+        left, right = 0, 0
 
-        if len(nums) == 2:
+        n = len(nums)
 
-            if nums[i] == nums[j]:
+        while right < n:
+            nums[left] = nums[right]
 
-                return k
-            
-            return k+1
+            while right < n and nums[left] == nums[right]:
+                right += 1
 
-        while (i < len(nums)) and (j < len(nums)):
+            left += 1
 
-            if nums[i] == nums[j]:
-                
-                j += 1
-            
-            if j > (len(nums) -1):
-
-                return k
+        return left
