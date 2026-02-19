@@ -19,4 +19,4 @@ class Solution:
             else:
                 L = M + 1
 
-        return L + 1
+        return L
