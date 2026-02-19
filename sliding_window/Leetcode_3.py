@@ -6,7 +6,7 @@ class Solution:
 
         for right in range(len(s)):
             if s[right] in mapPrev:
-                left = max(mapPrev[s[right]], left)
+                left = max(mapPrev[s[right]] + 1, left)
 
             mapPrev[s[right]] = right
 
