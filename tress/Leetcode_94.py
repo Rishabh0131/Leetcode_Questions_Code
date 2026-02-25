@@ -12,7 +12,8 @@ class TreeNode:
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 
-        stack = res = []
+        stack = []
+        res = []
         curr = root
 
         while curr or stack:
