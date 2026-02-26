@@ -30,3 +30,20 @@ class Solution:
                     visited.append(False)
 
         return res
+
+    def postorderTraversalRecursive(self, root: Optional[TreeNode]) -> List[int]:
+
+        res = []
+
+        def postOrder(node):
+
+            if node is None:
+                return
+
+            postOrder(node.left)
+            postOrder(node.right)
+            res.append(node.val)
+
+        postOrder(root)
+
+        return res
