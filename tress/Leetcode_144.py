@@ -27,3 +27,20 @@ class Solution:
                 stack.append(node.left)
 
         return res
+
+    def preorderTraversalRecursive(self, root: Optional[TreeNode]) -> List[int]:
+
+        res = []
+
+        def preOrder(node):
+
+            if node is None:
+                return
+
+            res.append(node.val)
+            preOrder(node.left)
+            preOrder(node.right)
+
+        preOrder(root)
+
+        return res
